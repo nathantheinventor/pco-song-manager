@@ -1,3 +1,23 @@
 <main>
-    <ion-card></ion-card>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Login</ion-card-title>
+            <ion-card-subtitle>Use your PCO API key, found
+                <a href="https://api.planningcenteronline.com/oauth/applications" target="_blank">here</a>
+            </ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+            <div id="error">{{ errorMessage }}</div>
+            <ion-item>
+                <ion-label position="floating">Username</ion-label>
+                <ion-input [(ngModel)]="username"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input [(ngModel)]="password" type="password"></ion-input>
+            </ion-item>
+            <ion-button expand="block" (click)="login()">Login</ion-button>
+        </ion-card-content>
+    </ion-card>
 </main>
